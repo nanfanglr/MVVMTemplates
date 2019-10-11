@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <#import "root://activities/common/kotlin_macros.ftl" as kt>
-<#import "root://activities/MVPArmsTemplate/dagger2_macros.ftl" as dagger2>
+<#import "root://activities/MVVMSimpleTemplate/dagger2_macros.ftl" as dagger2>
 <recipe>
  <#include "../common/recipe_manifest.xml.ftl" />
 <@kt.addAllKotlinDependencies />

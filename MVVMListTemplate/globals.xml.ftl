@@ -15,7 +15,7 @@
  * ================================================
  * Description:
  * <p>
- * Created by MVPArmsTemplate on ${.now?string["MM/dd/yyyy HH:mm"]}
+ * Created by MVVMListTemplate on ${.now?string["MM/dd/yyyy HH:mm"]}
  * ================================================
  */
 </#macro>

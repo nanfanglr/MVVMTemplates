@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
-<template name="MVVM-SimpleActivity"
-    description="一键创建SimpleActivity"
+<template name="MVVM-ListActivity"
+    description="一键创建ListActivity"
     format="5" minApi="9" minBuildApi="15" revision="1">
 
     <category value="Activity" />

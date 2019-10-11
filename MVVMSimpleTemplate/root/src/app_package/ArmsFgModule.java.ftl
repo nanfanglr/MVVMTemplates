@@ -13,7 +13,7 @@ import dagger.Binds;
 import dagger.Module;
 import dagger.multibindings.IntoMap;
 
-<#import "root://activities/MVPArmsTemplate/globals.xml.ftl" as gb>
+<#import "root://activities/MVVMSimpleTemplate/globals.xml.ftl" as gb>
 
 <@gb.fileHeader />
 @Module(includes = {BaseFragmentModule.class})

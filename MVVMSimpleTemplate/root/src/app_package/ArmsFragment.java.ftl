@@ -8,7 +8,7 @@ import android.view.View;
 
 import com.rui.mvvm.fragment.BaseLazyVMFragment;
 
-<#import "root://activities/MVPArmsTemplate/globals.xml.ftl" as gb>
+<#import "root://activities/MVVMSimpleTemplate/globals.xml.ftl" as gb>
 
 <@gb.fileHeader />
 public class ${pageName}Fragment extends BaseLazyVMFragment<Fragment${pageName}Binding,${pageName}FgViewModel>{

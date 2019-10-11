@@ -12,9 +12,9 @@ public class ${pageName}Repository {
     public  ${pageName}Repository(NetService netService) {
         this.netService = netService;
     }
-了
+
 //   示例代码
-//    public Single<ResultModel<UserModel>> lginOB(String userKey, String userPsw) {
+//    public Single<ResultModel<UserModel>> loginOB(String userKey, String userPsw) {
 //        return netService.login(userKey, userPsw);
 //    }
 

@@ -4,7 +4,7 @@ import android.os.Bundle;
 
 import com.rui.mvvm.activity.BaseVMActivity;
 
-<#import "root://activities/MVPArmsTemplate/globals.xml.ftl" as gb>
+<#import "root://activities/MVVMListTemplate/globals.xml.ftl" as gb>
 
 <@gb.fileHeader />
 public class ${pageName}Activity extends BaseTranActivity<Activity${pageName}Binding,${pageName}ViewModel>{
