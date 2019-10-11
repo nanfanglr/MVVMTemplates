@@ -16,6 +16,11 @@
                  to="${escapeXmlAttribute(resOut)}/layout/${fragmentLayoutName}.xml" />
 </#if>
 
+<#if needBean && generateBeanLayout>
+    <instantiate from="root/res/layout/item.xml.ftl"
+                 to="${escapeXmlAttribute(resOut)}/layout/${itemLayoutName}.xml" />
+</#if>
+
 <#if needActivity >
     <instantiate from="root/src/app_package/ArmsActivity.${ktOrJavaExt}.ftl"
                    to="${projectOut}/src/main/java/${slashedPackageName(ativityPackageName)}/${pageName}Activity.${ktOrJavaExt}" />
@@ -26,6 +31,11 @@
     <instantiate from="root/src/app_package/ArmsFragment.${ktOrJavaExt}.ftl"
                    to="${projectOut}/src/main/java/${slashedPackageName(fragmentPackageName)}/${pageName}Fragment.${ktOrJavaExt}" />
     <open file="${projectOut}/src/main/java/${slashedPackageName(fragmentPackageName)}/${pageName}Fragment.${ktOrJavaExt}" />
+</#if>
+
+<#if needBean >
+    <instantiate from="root/src/app_package/ArmsModel.${ktOrJavaExt}.ftl"
+                   to="${projectOut}/src/main/java/${slashedPackageName(beanPackageName)}/${pageName}Model.${ktOrJavaExt}" />
 </#if>
 
 <#if needPresenter && needActivity>

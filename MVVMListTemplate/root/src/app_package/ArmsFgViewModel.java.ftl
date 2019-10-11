@@ -7,16 +7,24 @@ import com.rui.mvvm.viewmodel.BaseViewModel;
 
 import javax.inject.Inject;
 
-public class ${pageName}FgViewModel extends BaseViewModel {
+public class ${pageName}FgViewModel extends BasePageViewModel<${pageName}Model> {
+
 //    示例代码，注入数据源
 //    @Inject
 //    LoginRepository repository;
+
     /**
      * @param application ，getApplication()方法可以得到application
      */
     @Inject
     public ${pageName}FgViewModel(@NonNull BaseApplication application) {
         super(application);
+    }
+
+    @Override
+    public Single<ResultModel<${pageName}Model>> getDataOB() {
+        return Single.error(new Throwable("接口未完成"));
+//        return repository.getXXXXOB();
     }
 
 //    示例代码，注入数据源

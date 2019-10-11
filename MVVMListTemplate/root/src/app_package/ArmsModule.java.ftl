@@ -29,8 +29,9 @@ import dagger.multibindings.IntoMap;
 <#import "root://activities/MVVMListTemplate/globals.xml.ftl" as gb>
 
 <@gb.fileHeader />
-@Module(includes = BaseActivityModule.class)
+@Module(includes = {BaseActivityModule.class, LLModule.class, ObservableModule.class})
 public abstract class ${pageName}Module {
+
 // 示例代码，根据需求修改
 //    @Provides
 //    static ObservableList<Fragment> providesObservableList() {
@@ -51,6 +52,10 @@ public abstract class ${pageName}Module {
     @ViewModelScope(${pageName}ViewModel.class)
     abstract ViewModel bindViewModel(${pageName}ViewModel viewModel);
 <#elseif needActivity>
+    @Provides
+    static BaseRvAdapter<${pageName}Model> providesAdapter() {
+        return new BaseRvAdapter<>(R.layout.${itemLayoutName});
+    }
 
     @Binds
     @ActivityScope

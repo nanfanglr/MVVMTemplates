@@ -60,7 +60,7 @@
         help="Presenter 将被输出到此包下,请认真核实此包名是否是你需要输出的目标包名" id="presenterPackageName"
         suggest="${packageName}" type="string" visibility="needPresenter" />
 
-    <parameter name="Generate Model" default="false" help="是否需要生成 Model ? 不勾选则不生成" id="needModel"
+    <parameter name="Generate Model" default="true" help="是否需要生成 Model ? 不勾选则不生成" id="needModel"
         type="boolean" />
 
 

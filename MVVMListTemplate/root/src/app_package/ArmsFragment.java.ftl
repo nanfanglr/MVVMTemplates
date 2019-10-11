@@ -11,8 +11,21 @@ import com.rui.mvvm.fragment.BaseLazyVMFragment;
 <#import "root://activities/MVVMListTemplate/globals.xml.ftl" as gb>
 
 <@gb.fileHeader />
-public class ${pageName}Fragment extends BaseLazyVMFragment<Fragment${pageName}Binding,${pageName}FgViewModel>{
+public class ${pageName}Fragment extends BasePageVMFragment<
+        Fragment${pageName}Binding
+        ,${pageName}FgViewModel
+        , BaseRvAdapter
+        , LinearLayoutManager
+        , RvOnListChangedCallback
+        >{
 
+    /**
+     * 工厂方法，模板生成代码，请根据需求去修改
+     *
+     * @param context
+     * @param dataType
+     * @param title
+     */
     public static ${pageName}Fragment newInstance(Context context, int dataType, String title) {
         Bundle bundle = new Bundle();
         bundle.putInt("status", dataType);
@@ -32,16 +45,50 @@ public class ${pageName}Fragment extends BaseLazyVMFragment<Fragment${pageName}B
     }
 
     @Override
+    protected SmartRefreshLayout getRefreshLayout() {
+        return binding.refresh;
+    }
+
+    @Override
+    protected RecyclerView getRV() {
+        return binding.rvData;
+    }
+
+
+    @Override
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
 
     }
 
+    /**
+     * 获取Arguments传过来的数据模，模板生成代码，请根据需求去修改
+     */
+    private void getArgumentsData() {
+         int status = getArguments().getInt("status", -1);
+    }
+
+
     @Override
     protected void lazyFetchData() {
 
     }
 
+    /**
+     * 列表item的点击事件处理，模板生成代码，请根据需求去修改
+     */
+    private void initEvent() {
+        adapter.setOnItemClickListener((adapter, view, position) -> {
+            //处理item点击逻辑
+
+
+        });
+        adapter.setOnItemChildClickListener((adapter, view, position) -> {
+            //处理item里面子view的点击逻辑
+
+
+        });
+    }
 
 }

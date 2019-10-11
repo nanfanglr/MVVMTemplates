@@ -7,7 +7,7 @@ import com.rui.mvvm.viewmodel.BaseViewModel;
 
 import javax.inject.Inject;
 
-public class ${pageName}ViewModel extends BaseViewModel {
+public class ${pageName}ViewModel extends BasePageViewModel<${pageName}Model>  {
 
 //    示例代码，注入数据源
 //    @Inject
@@ -19,6 +19,12 @@ public class ${pageName}ViewModel extends BaseViewModel {
     @Inject
     public ${pageName}ViewModel(@NonNull BaseApplication application) {
         super(application);
+    }
+
+    @Override
+    public Single<ResultModel<${pageName}Model>> getDataOB() {
+        return Single.error(new Throwable("接口未完成"));
+//        return repository.getXXXXOB();
     }
 
 //    示例代码，登录方法

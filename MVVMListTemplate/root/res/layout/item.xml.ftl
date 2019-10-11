@@ -7,19 +7,15 @@
     <data>
 
         <variable
-            name="viewModel"
-<#if needActivity >
-            type="${packageName}.${pageName}ViewModel" />
-<#elseif needFragment && !needActivity>
-            type="${packageName}.${pageName}FgViewModel" />
-</#if>
+            name="itemViewModel"
+            type="${packageName}.${pageName}Model" />
+
     </data>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical"
-        tools:context="${packageName}.${pageName}Activity">
+        android:orientation="vertical">
 
     </LinearLayout>
 </layout>

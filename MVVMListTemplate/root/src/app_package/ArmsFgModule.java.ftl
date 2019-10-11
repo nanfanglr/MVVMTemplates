@@ -16,7 +16,7 @@ import dagger.multibindings.IntoMap;
 <#import "root://activities/MVVMListTemplate/globals.xml.ftl" as gb>
 
 <@gb.fileHeader />
-@Module(includes = {BaseFragmentModule.class})
+@Module(includes = {BaseFragmentModule.class, LLModule.class, ObservableModule.class})
 public abstract class ${pageName}FgModule {
 
 // 示例代码，根据需求修改
@@ -24,6 +24,11 @@ public abstract class ${pageName}FgModule {
 //    static ObservableList<Fragment> providesObservableList() {
 //        return new ObservableArrayList<Fragment>();
 //    }
+
+    @Provides
+    static BaseRvAdapter providesProAdapter() {
+        return new BaseRvAdapter(R.layout.${itemLayoutName});
+    }
 
     @Binds
     @Named(BaseFragmentModule.FRAGMENT)
