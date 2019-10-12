@@ -10,6 +10,8 @@ import com.rui.common.adapter.BaseRvAdapter;
 import com.rui.common.base.BasePageVMActivity;
 import com.rui.mvvm.obcallback.RvOnListChangedCallback;
 import com.scwang.smartrefresh.layout.SmartRefreshLayout;
+import com.${(ativityPackageName?split("."))[1]}.${(ativityPackageName?split("."))[2]}.R;
+import com.${(ativityPackageName?split("."))[1]}.${(ativityPackageName?split("."))[2]}.databinding.Activity${pageName}Binding;
 
 <#import "root://activities/MVVMListTemplate/globals.xml.ftl" as gb>
 
@@ -17,7 +19,7 @@ import com.scwang.smartrefresh.layout.SmartRefreshLayout;
 public class ${pageName}Activity extends BasePageVMActivity<
         Activity${pageName}Binding
         ,${pageName}ViewModel
-        , BaseRvAdapter
+        , BaseRvAdapter<${pageName}Model>
         , LinearLayoutManager
         , RvOnListChangedCallback
         >{
@@ -31,7 +33,7 @@ public class ${pageName}Activity extends BasePageVMActivity<
      * @param requestCode
      */
     public static void actionStart(Activity context, long csId, double prodValue, int requestCode) {
-        Intent intent = new Intent(context, TestListActivity.class);
+        Intent intent = new Intent(context, ${pageName}Activity.class);
         intent.putExtra("csId", csId);
         intent.putExtra("prodValue", prodValue);
 //        context.startActivity(intent);

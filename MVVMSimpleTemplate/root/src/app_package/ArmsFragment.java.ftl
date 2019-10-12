@@ -5,6 +5,8 @@ import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.view.View;
+import com.${(moudlePackageName?split("."))[1]}.${(moudlePackageName?split("."))[2]}.R;
+import com.${(ativityPackageName?split("."))[1]}.${(ativityPackageName?split("."))[2]}.databinding.Fragment${pageName}Binding;
 
 import com.rui.mvvm.fragment.BaseLazyVMFragment;
 
@@ -19,7 +21,6 @@ public class ${pageName}Fragment extends BaseLazyVMFragment<Fragment${pageName}B
         bundle.putString("title", title);
         return (${pageName}Fragment) Fragment.instantiate(context, ${pageName}Fragment.class.getName(), bundle);
     }
-
 
     @Override
     protected int getLayoutID(Bundle savedInstanceState) {

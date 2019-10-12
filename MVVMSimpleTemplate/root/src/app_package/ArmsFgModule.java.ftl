@@ -6,11 +6,13 @@ import android.arch.lifecycle.ViewModel;
 import com.rui.mvvm.dagger.modules.BaseFragmentModule;
 import com.rui.mvvm.dagger.scopes.FragmentScope;
 import com.rui.mvvm.dagger.scopes.ViewModelScope;
+import com.${(moudlePackageName?split("."))[1]}.${(moudlePackageName?split("."))[2]}.R;
 
 import javax.inject.Named;
 
 import dagger.Binds;
 import dagger.Module;
+import dagger.Provides;
 import dagger.multibindings.IntoMap;
 
 <#import "root://activities/MVVMSimpleTemplate/globals.xml.ftl" as gb>
@@ -19,11 +21,11 @@ import dagger.multibindings.IntoMap;
 @Module(includes = {BaseFragmentModule.class})
 public abstract class ${pageName}FgModule {
 
-// 示例代码，根据需求修改
-//    @Provides
-//    static ObservableList<Fragment> providesObservableList() {
+//  示例代码，根据需求修改
+//  @Provides
+//  static ObservableList<Fragment> providesObservableList() {
 //        return new ObservableArrayList<Fragment>();
-//    }
+//  }
 
     @Binds
     @Named(BaseFragmentModule.FRAGMENT)
