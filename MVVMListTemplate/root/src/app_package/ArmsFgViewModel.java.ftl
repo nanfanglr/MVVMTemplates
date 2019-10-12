@@ -2,10 +2,13 @@ package ${presenterPackageName};
 
 import android.support.annotation.NonNull;
 
+import com.rui.common.base.BasePageViewModel;
 import com.rui.mvvm.BaseApplication.BaseApplication;
-import com.rui.mvvm.viewmodel.BaseViewModel;
+import com.rui.mvvm.network.basemodel.ResultModel;
 
 import javax.inject.Inject;
+
+import io.reactivex.Single;
 
 public class ${pageName}FgViewModel extends BasePageViewModel<${pageName}Model> {
 
