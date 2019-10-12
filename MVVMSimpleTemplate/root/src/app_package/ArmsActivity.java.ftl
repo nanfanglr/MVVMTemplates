@@ -11,6 +11,11 @@ import com.${(ativityPackageName?split("."))[1]}.${(ativityPackageName?split("."
 <@gb.fileHeader />
 public class ${pageName}Activity extends BaseTranActivity<Activity${pageName}Binding,${pageName}ViewModel>{
 
+//   //TODO:  请把这段dagger2的注入代码复制到ActivityBindingModule中
+//    @ActivityScope
+//    @ContributesAndroidInjector(modules = {pageName}Module.class)
+//    abstract {pageName}Activity m{pageName}Injector();
+
     /**
      * 跳转方法，模板生成代码，请根据需求去修改
      *

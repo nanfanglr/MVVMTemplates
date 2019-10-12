@@ -41,13 +41,11 @@
 <#if needPresenter && needActivity>
     <instantiate from="root/src/app_package/ArmsViewModel.${ktOrJavaExt}.ftl"
                    to="${projectOut}/src/main/java/${slashedPackageName(presenterPackageName)}/${pageName}ViewModel.${ktOrJavaExt}" />
-    <open file="${projectOut}/src/main/java/${slashedPackageName(presenterPackageName)}/${pageName}ViewModel.${ktOrJavaExt}" />
 </#if>
 
 <#if needPresenter && !needActivity && needFragment >
     <instantiate from="root/src/app_package/ArmsFgViewModel.${ktOrJavaExt}.ftl"
                    to="${projectOut}/src/main/java/${slashedPackageName(presenterPackageName)}/${pageName}FgViewModel.${ktOrJavaExt}" />
-    <open file="${projectOut}/src/main/java/${slashedPackageName(presenterPackageName)}/${pageName}ViewModel.${ktOrJavaExt}" />
 </#if>
 
 <#if needModel>
